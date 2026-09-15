@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<!-- CONTACT SECTION -->
+<section class="contact-section" id="contact">
+    <div class="contact-container">
+
+        <div class="contact-text">
+            <span class="contact-label">GET IN TOUCH</span>
+
+            <h2>Let's Stay Connected 🌊</h2>
+
+            <p>
+                Have a question?
+            </p>
+        </div>
+
+        <div class="contact-links">
+            <a href="mailto:enterjoh@gmail.com" class="contact-item">
+                <span>✉️</span>
+                <div>
+                    <strong>Email</strong>
+                    <small>enterjoh@gmail.com</small>
+                </div>
+            </a>
+
+            <a href="#" class="contact-item">
+                <span>📱</span>
+                <div>
+                    <strong>Social Media</strong>
+                    <small>Connect online</small>
+                </div>
+            </a>
+
+            <a href="#" class="contact-btn">
+                Contacts→
+            </a>
+        </div>
+
+    </div>
+</section>
+</html>
+<style>
+
+/* ---------- CONTACT SECTION ---------- */
+
+.contact-section {
+    padding: 65px 20px;
+    background: linear-gradient(135deg, #168ca8, #36b9ca);
+    color: white;
+}
+
+.contact-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.contact-text {
+    max-width: 500px;
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    font-weight: bold;
+    opacity: 0.85;
+}
+
+.contact-text h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin: 10px 0 15px;
+}
+
+.contact-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    opacity: 0.9;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 280px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+.contact-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(5px);
+}
+
+.contact-item > span {
+    font-size: 1.5rem;
+}
+
+.contact-item strong {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.contact-item small {
+    opacity: 0.85;
+}
+
+.contact-btn {
+    text-align: center;
+    padding: 12px 20px;
+    margin-top: 5px;
+    border-radius: 25px;
+    background: white;
+    color: #168ca8;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    background: #e8fbfd;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-links {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .contact-item {
+        text-align: left;
+    }
+}
+

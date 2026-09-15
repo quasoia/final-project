@@ -1,0 +1,244 @@
+```html
+<!-- TEEN MENTAL HEALTH SECTION -->
+<section class="mental-health-section" id="wellbeing">
+    <div class="mental-container">
+
+        <div class="mental-heading">
+            <span class="mental-label">YOUR WELLBEING 🌊</span>
+
+            <h2>
+                You Don't Have to
+                <span>Navigate Alone</span>
+            </h2>
+
+            <p>
+                Being a teenager can feel overwhelming sometimes.
+                Taking care of your mental health starts with small,
+                supportive steps.
+            </p>
+        </div>
+
+        <div class="mental-cards">
+
+            <div class="mental-card">
+                <div class="mental-icon">💙</div>
+                <h3>Talk to Someone</h3>
+                <p>
+                    Share how you're feeling with someone you trust,
+                    such as a friend, parent, teacher, or school counselor.
+                </p>
+            </div>
+
+            <div class="mental-card">
+                <div class="mental-icon">🌱</div>
+                <h3>Take Small Steps</h3>
+                <p>
+                    Give yourself time to rest, do things you enjoy,
+                    and focus on one manageable step at a time.
+                </p>
+            </div>
+
+            <div class="mental-card">
+                <div class="mental-icon">☀️</div>
+                <h3>Be Kind to Yourself</h3>
+                <p>
+                    You do not have to be perfect. Your feelings matter,
+                    and asking for help is a sign of strength.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="support-box">
+            <div class="support-symbol">🐚</div>
+
+            <div>
+                <h3>It's Okay to Ask for Help</h3>
+                <p>
+                    If things feel difficult for a while, consider talking
+                    with a trusted adult, school counselor, or mental health
+                    professional. You deserve support.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<style>
+/* ---------- TEEN MENTAL HEALTH SECTION ---------- */
+
+.mental-health-section {
+    padding: 90px 20px;
+    background: linear-gradient(
+        180deg,
+        #e8fbfd 0%,
+        #c5edf2 100%
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.mental-health-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    top: -250px;
+    right: -150px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 50%;
+}
+
+.mental-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+
+/* ---------- HEADING ---------- */
+
+.mental-heading {
+    max-width: 700px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.mental-label {
+    color: #168ca8;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 3px;
+}
+
+.mental-heading h2 {
+    color: #164b68;
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    margin: 12px 0 18px;
+}
+
+.mental-heading h2 span {
+    color: #168ca8;
+    display: block;
+}
+
+.mental-heading p {
+    color: #507080;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+
+/* ---------- CARDS ---------- */
+
+.mental-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.mental-card {
+    padding: 30px 25px;
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(22, 140, 168, 0.08);
+    transition: 0.3s ease;
+}
+
+.mental-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(22, 140, 168, 0.15);
+}
+
+.mental-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: #d8f6f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+}
+
+.mental-card h3 {
+    color: #164b68;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.mental-card p {
+    color: #607d8b;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+
+/* ---------- SUPPORT BOX ---------- */
+
+.support-box {
+    margin-top: 35px;
+    padding: 25px 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #168ca8;
+    color: white;
+    border-radius: 18px;
+    box-shadow: 0 12px 30px rgba(22, 140, 168, 0.2);
+}
+
+.support-symbol {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.support-box h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.support-box p {
+    line-height: 1.6;
+    opacity: 0.92;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 768px) {
+
+    .mental-health-section {
+        padding: 70px 20px;
+    }
+
+    .mental-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .mental-card {
+        padding: 25px 20px;
+    }
+
+    .support-box {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+```

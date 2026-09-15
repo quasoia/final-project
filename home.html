@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>templateure | Home</title>
+    <meta name="description" content="Welcome to my website.">
+
+    <style>
+        /* ---------- RESET ---------- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #12343b;
+            background: #dff7fb;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ---------- HEADER ---------- */
+        header {
+            background: #dff7fb;
+            border-bottom: 1px solid#b8e8ef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #006d8f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+        .nav-links a:hover {
+            color: #006d8f;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            border: none;
+            background: none;
+        }
+
+        /* ---------- HERO ---------- */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #e8fbff, #dff7fb);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #356b78;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 6px;
+            background: #006d8f;
+            color: #dff7fb;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #006d8f;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #d9f0f3;
+            color: #12343b;
+            margin-left: 10px;
+        }
+
+        .btn-secondary:hover {
+            background: #d1d5db;
+        }
+
+        /* ---------- FEATURES ---------- */
+        .features {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #356b78;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            color: #356b78;
+        }
+
+        /* ---------- ABOUT ---------- */
+        .about {
+            padding: 80px 0;
+            background: #b8e8ef;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image {
+            background: #dbeafe;
+            min-height: 300px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .about-text h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #356b78;
+            margin-bottom: 20px;
+        }
+
+        /* ---------- CTA ---------- */
+        .cta {
+            padding: 80px 0;
+            text-align: center;
+            background: #006d8f;
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+        }
+
+        .cta .btn {
+            background: #dff7fb;
+            color: #006d8f;
+        }
+
+        /* ---------- FOOTER ---------- */
+        footer {
+            background: #073b4c;
+            color: #dff7fb;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: #9bd3dc;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            margin: 0 8px;
+            color: #dff7fb;
+        }
+
+        .social-links a:hover {
+            color: #dff7fb;
+        }
+
+
+        /* ---------- OCEAN DETAILS ---------- */
+        body { background: linear-gradient(180deg, #dff7fb 0%, #c5eef3 45%, #a8dfe8 100%); }
+        header { background: rgba(223,247,251,.92); backdrop-filter: blur(10px); }
+        .hero {
+            background: radial-gradient(circle at 15% 25%, rgba(255,255,255,.75) 0 7%, transparent 8%),
+                        radial-gradient(circle at 85% 70%, rgba(255,255,255,.4) 0 5%, transparent 6%),
+                        linear-gradient(160deg, #e8fbff 0%, #a9e3ec 55%, #65bfd0 100%);
+            position: relative; overflow: hidden;
+        }
+        .hero::after {
+            content: "〰 〰 〰 〰 〰 〰 〰";
+            position: absolute; bottom: 12px; left: 0; width: 100%;
+            color: rgba(255,255,255,.7); font-size: 3rem; letter-spacing: .3rem;
+            white-space: nowrap;
+        }
+        .feature-card { background: rgba(255,255,255,.55); border-color: rgba(0,109,143,.18); box-shadow: 0 8px 25px rgba(0,80,100,.08); }
+        .about { background: rgba(184,232,239,.7); }
+        .about-image { background: linear-gradient(145deg, #8ed8e2, #dff7fb); border: 1px solid rgba(0,109,143,.15); }
+        .cta { background: linear-gradient(135deg, #006d8f, #07556c); }
+        .btn { border-radius: 999px; }
+        .btn-secondary { background: rgba(255,255,255,.65); }
+
+        /* ---------- RESPONSIVE ---------- */
+        @media (max-width: 768px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #dff7fb;
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+                border-bottom: 1px solid #eee;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .feature-grid,
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .btn {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container navbar">
+
+            <a href="#" class="logo">Hospitality</a>
+
+            <button class="menu-btn" onclick="toggleMenu()">
+                ☰
+            </button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <main>
+
+        <section class="hero" id="home">
+            <div class="container hero-content">
+
+                <h1>Dive Into Your Inner Thoughts</h1>
+
+                <p>
+                    Explore, relax, and discover what lies beneath the surface.
+                </p>
+
+                <a href="D:\po jetmeowmeow\howtoavoid.html" class="btn">
+                    Get Started
+                </a>
+
+                <a href="D:\po jetmeowmeow\about.html" class="btn btn-secondary">
+                    Learn More
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- FEATURES SECTION -->
+        <section class="features" id="features">
+
+            <div class="container">
+
+                <div class="section-title">
+                    <h2>What are the contents?</h2>
+                    <p>Everything you need to get started.</p>
+                </div>
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🌊</div>
+                        <h3>Supportive</h3>
+                        <p>
+                            A welcoming experience for teenagers.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🐚</div>
+                        <h3>Easygoing</h3>
+                        <p>
+                            A calm, refreshing design
+                            that works across devices.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🐠</div>
+                        <h3>Always Afloat</h3>
+                        <p>
+                            Beautifully adapts across desktops, tablets,
+                            and mobile phones.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT SECTION -->
+        <section class="about" id="about">
+
+            <div class="container about-content">
+
+                <div class="about-image">
+                    <img src="https://www.pinterest.com/pin/863072716106949457/" alt="employee picture trust">
+                </div>
+
+                <div class="about-text">
+
+                    <h2>About Us</h2>
+
+                    <p>
+                        Welcome to my little corner. I create simple guides for a calmer, more refreshing life.
+                    </p>
+
+                    <p>
+                        <ul>
+                            <li>Ride the waves of life.</li>
+                            <li>Keep your horizons bright.</li>
+                            <li>Be happy and healthy.</li>
+                        </ul>
+                        
+                    </p>
+
+                    <a href="D:\po jetmeowmeow\about.html" class="btn">
+                        More details
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CTA SECTION -->
+        <section class="cta" id="contact">
+
+            <div class="container">
+
+                <h2>Ready to Make a Difference?</h2>
+
+                <p>
+                    Discover simple ways to care for yourself and enjoy the journey.
+                </p>
+
+                <a href="D:\po jetmeowmeow\contact.html" class="btn">
+                    Contacts
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="container">
+
+            <p>
+            &copy; 2w6 sm291 WebsiteSimulator. NO rights reserved.
+            </p>
+
+           
+        </div>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function toggleMenu() {
+            document.getElementById("navLinks")
+                .classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
